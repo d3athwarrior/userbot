@@ -20,7 +20,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.sysd$")
+""" @register(outgoing=True, pattern="^.sysd$")
 async def sysdetails(sysd):
     """ For .sysd command, get system info using neofetch. """
     try:
@@ -37,7 +37,7 @@ async def sysdetails(sysd):
 
         await sysd.edit("`" + result + "`")
     except FileNotFoundError:
-        await sysd.edit("`Install neofetch first !!`")
+        await sysd.edit("`Install neofetch first !!`") """
 
 
 @register(outgoing=True, pattern="^.botver$")
@@ -76,7 +76,7 @@ async def bot_ver(event):
         )
 
 
-@register(outgoing=True, pattern="^.pip(?: |$)(.*)")
+""" @register(outgoing=True, pattern="^.pip(?: |$)(.*)")
 async def pipcheck(pip):
     """ For .pip command, do a pip search. """
     pipmodule = pip.pattern_match.group(1)
@@ -116,23 +116,14 @@ async def pipcheck(pip):
                            f"{invokepip}"
                            "`\n**Result: **\n`No Result Returned/False`")
     else:
-        await pip.edit("`Use .help pip to see an example`")
+        await pip.edit("`Use .help pip to see an example`") """
 
 
 @register(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit(
-                     "`i am alive My Mastor` \n"
-                     "`i can't die` \n"
-                     f"Telethon version: {version.__version__} \n"
-                     f"Python: {python_version()} \n"
-                     f"------------------------------------ \n"
-                     f"Website: https://www.facebook.com/Teknoways \n"
-                     f"User: {DEFAULTUSER} \n"
-                     f"Maintainer: @Mayur_Karaniya \n"
-                     f"Admin: @Three_Cube_TeKnoways \n"
-                     f"Userbot: @testing_userbot "
+                     "`What? You thought I'd die so easy?` \n"
                      )    
 
 
@@ -141,7 +132,7 @@ async def amireallyalive(alive):
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
-    output = '.aliveu [new user without brackets] nor can it be empty'
+    output = '.aliveu [new user without brackets] It can\'t be empty'
     if not (message == '.aliveu' or message[7:8] != ' '):
         newuser = message[8:]
         global DEFAULTUSER
@@ -158,14 +149,14 @@ async def amireallyalivereset(ureset):
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
-CMD_HELP.update(
+""" CMD_HELP.update(
     {"sysd": ".sysd\
-    \nUsage: Shows system information using neofetch."})
+    \nUsage: Shows system information using neofetch."}) """
 CMD_HELP.update({"botver": ".botver\
     \nUsage: Shows the userbot version."})
-CMD_HELP.update(
+""" CMD_HELP.update(
     {"pip": ".pip <module(s)>\
-    \nUsage: Does a search of pip modules(s)."})
+    \nUsage: Does a search of pip modules(s)."}) """
 CMD_HELP.update({
     "alive":
     ".alive\
