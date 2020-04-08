@@ -168,19 +168,19 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` **ago**"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"My Master **{DEFAULTUSER}** Is **afk since** {afk_since}.\
-                        \n**Because my King is** `{AFKREASON}`")
+                    await sender.reply(f"`**This is an automated reply**` \nI am afk \
+                        \n**because {AFKREASON}. I will reply when I am back.")
                 else:
-                    await mention.reply(f"My King 👑 {DEFAULTUSER} 👑 is **afk Since** {afk_since}.\nand My King has left a word for you only: \n{AFKSK}\n`.` ")
+                    await sender.replyf(f"I am afk but I have a message for you: \n{AFKSK}\n. ")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"My Master **{DEFAULTUSER}** Is **afk since** {afk_since}.\
-                            \n**Because my King is** `{AFKREASON}`")
+                        await sender.reply(f"`**This is an automated reply**` \nI am afk \
+                            \n**because {AFKREASON}. I will reply when I am back.")
                     else:
-                        await mention.reply(f"My King 👑 {DEFAULTUSER} 👑 is **afk Since** {afk_since}.\nand My King has left a word for you only: \n{AFKSK}\n`.` ")
+                        await sender.replyf(f"I am afk but I have a message for you: \n{AFKSK}\n. ")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
@@ -194,9 +194,6 @@ async def afk_on_pm(sender):
     global ISAFK
     global USERS
     global COUNT_MSG
-    global COUNT_MSG
-    global USERS
-    global ISAFK
     global USER_AFK  # pylint:disable=E0602
     global afk_time  # pylint:disable=E0602
     global afk_start
@@ -244,19 +241,19 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)}s` **ago**"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"My Master **{DEFAULTUSER}** Is **afk since** {afk_since}.\
-                        \n**Because my King is** `{AFKREASON}`")
+                    await sender.reply(f"`**This is an automated reply**` \nI am afk \
+                        \n**because {AFKREASON}. I will reply when I am back.")
                 else:
-                    await sender.replyf(f"My King 👑 {DEFAULTUSER} 👑 is **afk Since** {afk_since}.\nand My King has left a word for you only: \n{AFKSK}\n`.` ")
+                    await sender.replyf(f"I am afk. But I have a message for you: \n{AFKSK}\n. ")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"My Master **{DEFAULTUSER}** Is **afk since** {afk_since}.\
-                            \n**Because my King is** `{AFKREASON}`")
+                        await sender.reply(f"`**This is an automated reply**` \nI am afk \
+                            \nbecause {AFKREASON}. I will reply when I am back.")
                     else:
-                        await sender.reply(f"My King 👑 {DEFAULTUSER} 👑 is **afk Since** {afk_since}.\nand My King has left a word for you only: \n{AFKSK}\n`.` ")
+                        await sender.replyf(f"I am afk. But I have a message for you: \n{AFKSK}\n. ")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
