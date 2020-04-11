@@ -1,0 +1,5 @@
+#!/home/pi/OUB/oubvenv/bin/python3
+# encoding: utf-8
+
+from cowpy import cow
+cow.main()
