@@ -1,4 +1,4 @@
-#!/home/pi/OUB/oubvenv/bin/python3
+#!/home/pi/OUB/oubvenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
