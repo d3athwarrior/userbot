@@ -1,2 +1,2 @@
 #!/bin/bash
-source oubenv/bin/activate && python -m userbot
+source oubvenv/bin/activate && python -m userbot
