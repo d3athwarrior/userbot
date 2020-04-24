@@ -10,3 +10,5 @@ bin/*
 /error.log
 /stderror
 /stdoutput
+oubvenv/*
+
