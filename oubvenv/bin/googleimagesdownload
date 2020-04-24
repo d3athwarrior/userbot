@@ -1,4 +1,4 @@
-#!/home/pi/OUB/oubvenv/bin/python
+#!/home/pi/OUB/oubvenv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'google-images-download==2.8.0','console_scripts','googleimagesdownload'
 __requires__ = 'google-images-download==2.8.0'
 import re

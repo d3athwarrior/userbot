@@ -1,4 +1,4 @@
-#!/home/pi/OUB/oubvenv/bin/python
+#!/home/pi/OUB/oubvenv/bin/python3
 
 import argparse
 import code
