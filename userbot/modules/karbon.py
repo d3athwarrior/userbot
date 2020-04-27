@@ -382,7 +382,11 @@ async def carbon_api(e):
     await e.delete()  # Deleting msg
     
 
-
+CMD_HELP.update({
+    '.crblang':
+    '.crblang <source_code_language_to_set>\
+        \nUsage: Sets the programming language of the snippet.'
+})
  
     
 CMD_HELP.update({
