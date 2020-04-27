@@ -12,7 +12,6 @@ from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
 from userbot import (TELEGRAPH_SHORT_NAME, TEMP_DOWNLOAD_DIRECTORY, BOTLOG_CHATID, CMD_HELP, bot)
 from userbot.events import register
-from userbot import TEMP_DOWNLOAD_DIRECTORY
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=TELEGRAPH_SHORT_NAME)
