@@ -1,0 +1,2 @@
+1. Create a user by running "sudo -u postgres createuser --interactive --pwprompt"
+2. Create a database by running "sudo -u postgres createdb -O <username_created_step_1> <database_name>
