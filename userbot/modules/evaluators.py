@@ -152,9 +152,10 @@ async def terminal_runner(term):
             an example.```")
         return
 
-    if command in ("userbot.session", "config.env"):
-        await term.edit("`That's a dangerous operation! Not Permitted!`")
-        return
+    for unpermittedFile in ("userbot.session", "config.env", "app.json"):
+        if command.find(unpermittedFile) > 0:
+            await term.edit("`That's a dangerous operation! Not Permitted!`")
+            return
 
     process = await asyncio.create_subprocess_shell(
         command,
@@ -177,7 +178,7 @@ async def terminal_runner(term):
         remove("output.txt")
         return
 
-    if uid is 0:
+    if uid == 0:
         await term.edit("`" f"{curruser}:~# {command}" f"\n{result}" "`")
     else:
         await term.edit("`" f"{curruser}:~$ {command}" f"\n{result}" "`")
