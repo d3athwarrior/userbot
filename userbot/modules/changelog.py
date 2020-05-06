@@ -13,7 +13,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import CMD_HELP, bot, HEROKU_MEMEZ, HEROKU_API_KEY, HEROKU_APP_NAME
+from userbot import CMD_HELP, bot, HEROKU_MEMEZ, HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO_URL
 from userbot.events import register
 
 
@@ -38,7 +38,7 @@ async def chtream(ch):
     "For .update command, check if the bot is up to date, update if specified"
     await ch.edit("`Checking for updates, please wait....`")
     conf = ch.pattern_match.group(1).lower()
-    off_repo = 'https://github.com/mkaraniya/OpenUserBot.git'
+    off_repo = UPSTREAM_REPO_URL
 
     try:
         txt = "`Oops.. Updater cannot continue due to some problems occured`\n\n**LOGTRACE:**\n"
