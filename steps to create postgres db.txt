@@ -1,2 +1,9 @@
 1. Create a user by running "sudo -u postgres createuser --interactive --pwprompt"
 2. Create a database by running "sudo -u postgres createdb -O <username_created_step_1> <database_name>
+
+03-Aug-2020:
+I have since switched to MySQL/MariaDB for the bot due to memory limits on the Pi
+1. Login into mysql client using the root user and create a new user as follows:
+    create user 'oubuser' identified by 'oubuser';
+    create database oubdatabase;
+    grant all privileges on oubdatabase.* to 'oubuser'@localhost IDENTIFIED by 'oubuser';
