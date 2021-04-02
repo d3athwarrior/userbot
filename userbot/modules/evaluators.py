@@ -9,7 +9,7 @@ import asyncio
 from getpass import getuser
 from os import remove
 from sys import executable
-from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID
+from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID, DISABLED_TERM_WORDS
 from userbot.events import register
 
 
@@ -152,8 +152,8 @@ async def terminal_runner(term):
             an example.```")
         return
 
-    for unpermittedFile in ("userbot.session", "config.env", "app.json"):
-        if command.find(unpermittedFile) > 0:
+    for unpermittedWord in DISABLED_TERM_WORDS:
+        if command.strip().find(unpermittedWord.strip()) >= 0:
             await term.edit("`That's a dangerous operation! Not Permitted!`")
             return
 

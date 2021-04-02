@@ -160,6 +160,15 @@ GENIUS_API_TOKEN = os.environ.get("GENIUS", None)
 # Genius lyrics get this value from https://genius.com/developers both has same values
 GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 
+# Array of words that are not allowed to be executed from .term command
+# Default words are added so that the user doesn't enable them at any cost
+DISABLED_TERM_WORDS = ["userbot.session", "config.env", "app.json"]
+if os.environ.get("DISABLED_TERM_WORDS", None):
+    print(os.environ.get("DISABLED_TERM_WORDS", None).split(','))
+    temp = list(filter(lambda word: not(not word or word.isspace()),
+                       os.environ.get("DISABLED_TERM_WORDS", None).split(',')))
+    DISABLED_TERM_WORDS.extend(temp)
+
 
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
