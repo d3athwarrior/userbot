@@ -14,7 +14,7 @@ Copy the session file from that location to the root directory of the userbot de
 
 ## How To Host
 
-Option 1: Deploy it locally on Raspberry Pi or Termux or anything else that you like
+Option 1: Deploy it locally on Raspberry Pi or Termux or anything else that you like  
 Option 2: You can try to deploy it using Heroku or the likes but I don't guarantee whether or not it will work.
 
 ## Credits
