@@ -3,12 +3,12 @@ try:
 except ImportError:
     raise AttributeError
 
-from sqlalchemy import Column, UnicodeText, LargeBinary, Numeric
+from sqlalchemy import Column, UnicodeText, LargeBinary, Numeric, CHAR
 
 
 class Snips(BASE):
     __tablename__ = "snips"
-    snip = Column(UnicodeText, primary_key=True)
+    snip = Column(CHAR(255), primary_key=True)
     reply = Column(UnicodeText)
     f_mesg_id = Column(Numeric)
 

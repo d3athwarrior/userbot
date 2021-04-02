@@ -2,13 +2,13 @@ try:
     from userbot.modules.sql_helper import SESSION, BASE
 except ImportError:
     raise AttributeError
-from sqlalchemy import Column, UnicodeText, Numeric, String
+from sqlalchemy import Column, UnicodeText, Numeric, String, CHAR
 
 
 class Notes(BASE):
     __tablename__ = "notes"
     chat_id = Column(String(14), primary_key=True)
-    keyword = Column(UnicodeText, primary_key=True, nullable=False)
+    keyword = Column(CHAR(255), primary_key=True, nullable=False)
     reply = Column(UnicodeText)
     f_mesg_id = Column(Numeric)
 

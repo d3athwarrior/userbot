@@ -5,6 +5,21 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "oubvenv/bin/python3"
+		"python.pythonPath": "oubvenv/bin/python3",
+		"sqltools.connections": [
+			{
+				"database": "oubdatabase",
+				"driver": "MariaDB",
+				"mysqlOptions": {
+					"authProtocol": "default"
+				},
+				"name": "Oub",
+				"password": "oubuser",
+				"port": 3306,
+				"previewLimit": 50,
+				"server": "localhost",
+				"username": "oubuser"
+			}
+		]
 	}
 }

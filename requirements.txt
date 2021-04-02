@@ -65,3 +65,4 @@ jotquote
 csvfaker
 pymongo[srv]
 youtube_search
+PyMySQL
