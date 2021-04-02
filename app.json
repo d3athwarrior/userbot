@@ -211,6 +211,31 @@
       "description": "Switch to globally enable or disable logging of PMs instead of enabling or disabling per chat",
       "value": "True",
       "required": true
+    },
+    "SPOTIFY_USERNAME": {
+      "description": "Enter the Spotify account username to use with spotify now playing publisher publisher",
+      "value": "abcd@example.com",
+      "required":false
+    },
+    "SPOTIFY_CLIENT_ID": {
+      "description": "Enter the Spotify client id obtained from the developer dashboard",
+      "value": "",
+      "required": false
+    },
+    "SPOTIFY_CLIENT_SECRET": {
+      "description": "Enter the Spotify client secret obtained from the developer dashboard",
+      "value": "",
+      "required": false
+    },
+    "SPOTIFY_LIST_CHANNEL_ID": {
+      "description": "Enter the channel id where the songs need to be published",
+      "value": "",
+      "required": false
+    },
+    "SPOTIFY_QUERY_DELAY": {
+      "description": "The delay (in seconds) with which the spotify api should be queried",
+      "value": "2",
+      "required": false
     }
   },
   "addons": [

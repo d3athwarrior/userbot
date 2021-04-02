@@ -19,6 +19,19 @@
 				"previewLimit": 50,
 				"server": "localhost",
 				"username": "oubuser"
+			},
+			{
+				"mysqlOptions": {
+					"authProtocol": "default"
+				},
+				"previewLimit": 50,
+				"server": "john.db.elephantsql.com",
+				"port": 5432,
+				"driver": "MySQL",
+				"name": "elephantsql",
+				"username": "sbwhdikh",
+				"password": "XwvOEW4uEiDYUr6N2pMQvrYLAbmat9CN",
+				"database": "sbwhdikh"
 			}
 		]
 	}

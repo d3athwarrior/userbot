@@ -171,6 +171,24 @@ if os.environ.get("DISABLED_TERM_WORDS", None):
 # Switch to globally enable or disable logging of PMs instead of enabling or disabling per chat
 DISABLE_PM_LOGS = sb(os.environ.get("DISABLE_PM_LOGS", "False"))
 
+# Enter the Spotify account username to use with spotify now playing publisher publisher
+SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", "")
+
+# Enter the Spotify client id obtained from the developer dashboard
+SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID", "")
+
+# Enter the Spotify client secret obtained from the developer dashboard
+SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
+
+# Enter the user/channel/group (where you are a member) id where the songs need to be published
+SPOTIFY_LIST_CHANNEL_ID = os.environ.get("SPOTIFY_LIST_CHANNEL_ID", "")
+
+# The delay (in seconds) with which the spotify api should be queried
+SPOTIFY_QUERY_DELAY = int(os.environ.get("SPOTIFY_QUERY_DELAY", 5))
+
+if (SPOTIFY_QUERY_DELAY < 1):
+    LOGS.warning("The delay is less than 1 second defaulting to 5 seconds")
+    SPOTIFY_QUERY_DELAY = 5
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
