@@ -13,7 +13,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from telethon import events
 from telethon.tl import functions, types
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, TEMP_DOWNLOAD_DIRECTORY
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, TEMP_DOWNLOAD_DIRECTORY, LOGS, DISABLE_PM_LOGS
 from userbot.events import register
 
 
@@ -22,6 +22,8 @@ NO_PM_LOG_USERS = []
 #@borg.on(admin_cmd(incoming=True, func=lambda e: e.is_private))
 @register(incoming=True, disable_edited=True)
 async def monito_p_m_s(event):
+    if DISABLE_PM_LOGS:
+        return
     sender = await event.get_sender()
     if event.is_private and not (await event.get_sender()).bot:
         chat = await event.get_chat()

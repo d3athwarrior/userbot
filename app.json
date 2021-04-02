@@ -202,6 +202,11 @@
       "description": "String of comma separated words or group of words that you don't want the .term command to process",
       "value": "",
       "required": false
+    },
+    "DISABLE_PM_LOGS": {
+      "description": "Switch to globally enable or disable logging of PMs instead of enabling or disabling per chat",
+      "value": "True",
+      "required": true
     }
   },
   "addons": [

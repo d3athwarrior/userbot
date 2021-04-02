@@ -164,11 +164,12 @@ GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 # Default words are added so that the user doesn't enable them at any cost
 DISABLED_TERM_WORDS = ["userbot.session", "config.env", "app.json"]
 if os.environ.get("DISABLED_TERM_WORDS", None):
-    print(os.environ.get("DISABLED_TERM_WORDS", None).split(','))
     temp = list(filter(lambda word: not(not word or word.isspace()),
                        os.environ.get("DISABLED_TERM_WORDS", None).split(',')))
     DISABLED_TERM_WORDS.extend(temp)
 
+# Switch to globally enable or disable logging of PMs instead of enabling or disabling per chat
+DISABLE_PM_LOGS = sb(os.environ.get("DISABLE_PM_LOGS", "False"))
 
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
