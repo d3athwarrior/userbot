@@ -10,7 +10,7 @@ Copy the session file from that location to the root directory of the userbot de
 ## Untested
 
 1. The spotify web api may rate limit your developer account if too many requests are made.
-2. The spotify session is usually for 1 year. It is yet to be tested as to what will happen when the session expires.
+~~2. The spotify session is usually for 1 hour. It is yet to be tested as to what will happen when the session expires.~~ Fixed to auto-renew the session if expired
 
 ## How To Host
 
