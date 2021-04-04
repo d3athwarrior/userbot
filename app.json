@@ -227,7 +227,7 @@
       "value": "",
       "required": false
     },
-    "SPOTIFY_LIST_CHANNEL_ID": {
+    "SPOTIFY_LIST_CHAT_ID": {
       "description": "Enter the channel id where the songs need to be published",
       "value": "",
       "required": false

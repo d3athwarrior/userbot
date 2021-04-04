@@ -181,7 +181,7 @@ SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID", "")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
 
 # Enter the user/channel/group (where you are a member) id where the songs need to be published
-SPOTIFY_LIST_CHANNEL_ID = os.environ.get("SPOTIFY_LIST_CHANNEL_ID", "")
+SPOTIFY_LIST_CHAT_ID = os.environ.get("SPOTIFY_LIST_CHAT_ID", "")
 
 # The delay (in seconds) with which the spotify api should be queried
 SPOTIFY_QUERY_DELAY = int(os.environ.get("SPOTIFY_QUERY_DELAY", 5))
