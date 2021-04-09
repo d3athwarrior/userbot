@@ -11,4 +11,5 @@ bin/*
 /stderror
 /stdoutput
 oubvenv/*
-
+.cache-*
+config.env
