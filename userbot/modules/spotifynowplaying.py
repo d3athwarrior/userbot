@@ -86,8 +86,8 @@ if (SPOTIFY_USERNAME not in (None, "") and SPOTIFY_CLIENT_ID not in (None, "")
                                             '\n<a href="' + mobile_link + '">Open Mobile Link</a>', parse_mode='html')
                 except BadRequestError as ex:
                     if BOTLOG and BOTLOG_CHATID:
-                        LOGS.error("Invalid username specified in config" + ex.message)
-                        await bot.send_message("Error in publishing songs to the specified channel " + SPOTIFY_LIST_CHAT_ID +  " . Error is: " + ex.message)
+                        LOGS.error("Error in publishing songs to the specified chat. Error is: " + ex.message)
+                        await bot.send_message("Error in publishing songs to the specified chat " + SPOTIFY_LIST_CHAT_ID +  " . Error is: " + ex.message)
 
                 os.remove('image.png')
     scheduler = AsyncIOScheduler()
