@@ -190,6 +190,9 @@ if (SPOTIFY_QUERY_DELAY < 1):
     LOGS.warning("The delay is less than 1 second defaulting to 5 seconds")
     SPOTIFY_QUERY_DELAY = 5
 
+# The time (in seconds) to let a song play before publishing it
+SPOTIFY_PLAY_TIME_BEFORE_PUBLISH=int(os.environ.get('SPOTIFY_PLAY_TIME_BEFORE_PUBLISH', 45))
+
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
 if not os.path.exists('bin'):

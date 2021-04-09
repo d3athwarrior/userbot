@@ -4,7 +4,7 @@ aria2p
 async_generator
 asyncurban
 cowpy
-TgCrypto>=1.2.0
+cryptg
 cffi>=1.0.0
 dnspython
 emoji
@@ -64,6 +64,5 @@ jotquote
 csvfaker
 pymongo[srv]
 youtube_search
-PyMySQL
 spotipy
 apscheduler

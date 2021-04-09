@@ -236,6 +236,11 @@
       "description": "The delay (in seconds) with which the spotify api should be queried",
       "value": "2",
       "required": false
+    },
+    "SPOTIFY_PLAY_TIME_BEFORE_PUBLISH": {
+      "description": "The time (in seconds) to let a song play before publishing it. Default is 40",
+      "value": "40",
+      "required": false
     }
   },
   "addons": [
