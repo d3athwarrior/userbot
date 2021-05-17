@@ -66,6 +66,7 @@ if (SPOTIFY_USERNAME not in (None, "") and SPOTIFY_CLIENT_ID not in (None, "")
                     album_art_URL = album_art_detail['url']
             song_detail = is_song_published(song, album, artist)
             if (not song+album+artist in song_publish_grace_detail.keys()):
+                song_publish_grace_detail.clear()
                 song_publish_grace_detail[song+album+artist] = datetime.now()
 
             publish_grace_time_elapsed = (datetime.now() - song_publish_grace_detail[song+album+artist]).total_seconds()
