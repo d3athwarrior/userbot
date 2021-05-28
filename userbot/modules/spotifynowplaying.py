@@ -8,7 +8,7 @@ from spotipy.exceptions import SpotifyException
 from telethon.errors.rpcbaseerrors import BadRequestError
 from userbot import (BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS, LOGSPAMMER,
                      SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET,
-                     SPOTIFY_LIST_CHAT_ID, SPOTIFY_PLAY_TIME_BEFORE_PUBLISH,
+                     SPOTIFY_LIST_CHAT_ID, SPOTIFY_PLAY_TIME_BEFORE_PUBLISH, SPOTIFY_PUBLISH_SILENTLY,
                      SPOTIFY_QUERY_DELAY, SPOTIFY_USERNAME, bot)
 from userbot.modules.sql_helper.spotifypublished import (SpotifyPlayed,
                                                          is_song_published,
@@ -84,7 +84,7 @@ if (SPOTIFY_USERNAME not in (None, "") and SPOTIFY_CLIENT_ID not in (None, "")
                 try:
                     await bot.send_file(SPOTIFY_LIST_CHAT_ID, file = 'image.png', caption=message_body +
                                             '\n\n<a href="' + browser_link + '">Open Browser Link</a>' +
-                                            '\n<a href="' + mobile_link + '">Open Mobile Link</a>', parse_mode='html')
+                                            '\n<a href="' + mobile_link + '">Open Mobile Link</a>', parse_mode='html', silent=SPOTIFY_PUBLISH_SILENTLY)
                 except BadRequestError as ex:
                     if BOTLOG and BOTLOG_CHATID:
                         LOGS.error("Error in publishing songs to the specified chat. Error is: " + ex.message)

@@ -193,6 +193,9 @@ if (SPOTIFY_QUERY_DELAY < 1):
 # The time (in seconds) to let a song play before publishing it
 SPOTIFY_PLAY_TIME_BEFORE_PUBLISH=int(os.environ.get('SPOTIFY_PLAY_TIME_BEFORE_PUBLISH', 45))
 
+# Decide whether to publish silently
+SPOTIFY_PUBLISH_SILENTLY = sb(os.environ.get("SPOTIFY_PUBLISH_SILENTLY", "True"))
+
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
 if not os.path.exists('bin'):
